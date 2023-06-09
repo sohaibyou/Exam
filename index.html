@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+  />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+
+<h2 class="logo">HAMLA⛺</h2>
+<nav class="navigation">
+<a href="">Home</a>
+<a href="">About</a>
+<a href="">Services</a>
+<a href="">Contacts</a>
+<a class="btn-calc">Calculator</a>
+<button class="btnlogin-popup">Login</button>
+</nav>
+
+</header>
+
+<section class="home">
+    <div class="content">
+        <h1>FEEL NATURE.<br><span>RELAX</span></h1>
+        <P>Discover the world with our immersive travel platform, where wanderlust meets adventure. Explore breathtaking destinations, uncover hidden gems, and create unforgettable memories. Our expert team curates tailor-made itineraries, ensuring a seamless journey from start to finish. Connect with like-minded travelers, share experiences, and embrace diverse cultures. With our extensive resources and personalized recommendations, you'll unlock the ultimate travel experience. Whether you're a seasoned explorer or a first-time adventurer, embark on a voyage of a lifetime with us. Let your journey begin – dive into the wonders of our planet and redefine the way you travel.</P>
+        <a href="#">Read More</a>
+    </div>
+    <div class="media-icons">
+        <a href="#"><i class="uil uil-facebook"></i></a>
+        <a href="#"><i class="uil uil-twitter"></i></a>
+        <a href="#"><i class="uil uil-discord"></i></a>
+    </div>
+
+
+    <!--********** Calculator ***********/-->
+
+    <div class="calculator">
+        <div class="container">
+          <div class="header-container">
+            <!-- This heading also notifies about the theme change.-->
+            <h1 id="toast">Calculator</h1>
+
+          </div>
+          <div class="first-row">
+            <input type="text" name="result" id="result" placeholder="Result" readonly />
+            <input type="button" value="C" onclick="result.value=''" id="clear-button" />
+          </div>
+          <div class="second-row">
+            <input type="button" value="1" onclick="liveScreen(1)" />
+            <input type="button" value="2" onclick="liveScreen(2)" />
+            <input type="button" value="3" onclick="liveScreen(3)" />
+            <input type="button" value="+" onclick="liveScreen('+')" />
+          </div>
+          <div class="third-row">
+            <input type="button" value="4" onclick=" liveScreen(4)" />
+            <input type="button" value="5" onclick=" liveScreen(5)" />
+            <input type="button" value="6" onclick=" liveScreen(6)" />
+            <input type="button" value="-" onclick="liveScreen('-')" />
+          </div>
+          <div class="fourth-row">
+            <input type="button" value="7" onclick="liveScreen(7)" />
+            <input type="button" value="8" onclick="liveScreen(8)" />
+            <input type="button" value="9" onclick=" liveScreen(9)" />
+            <input type="button" value="x" onclick="liveScreen('*')" />
+          </div>
+          <div class="fifth-row">
+            <input type="button" value="/" onclick="liveScreen('/')" />
+            <input type="button" value="0" onclick="liveScreen(0)" />
+            <input type="button" value="." onclick="liveScreen('.')" />
+            <input type="button" value="=" onclick="calculate(result.value)" />
+          </div>
+        </div>
+      </div>
+
+
+
+<!--**********************************************-->
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+    
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+    
+    
+    
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Confirm Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox">I agree to the terms & conditions</label>
+                        
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section> 
+
+
+
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
