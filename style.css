@@ -206,6 +206,10 @@ body.active-popup::after {
     pointer-events: auto;
 }
 
+body.active-calculator::after {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 
 .wrapper.active-popup{
@@ -290,6 +294,10 @@ body.active-popup::after {
     top: -5px;
  }
 
+ /* .input-box input:invalid~label {
+  top: -5px;
+ } */
+
   .input-box input {
     width: 100%;
     height: 100%;
@@ -318,6 +326,7 @@ body.active-popup::after {
     display: flex;
     justify-content: space-between;
 }
+
 
 .remember-forgot label input {
     accent-color: #162938;
@@ -354,6 +363,12 @@ body.active-popup::after {
     margin: 25px 0 10px;
 }
 
+.login-register p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
 .login-register p a{
     color: #162938;
     text-decoration: none;
@@ -419,7 +434,7 @@ body.active-popup::after {
   
   }
   
-  input {
+  .input {
     padding: 22px;
     color: rgb(255, 255, 255);
     font-size: 1em;
