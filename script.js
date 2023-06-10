@@ -6,10 +6,14 @@ const iconClose = document.querySelector('.icon-close');
 const body = document.querySelector('body');
 const calc = document.querySelector('.calculator');
 const btnCalc = document.querySelector('.btn-calc');
+const result = document.querySelector("#result");
 
 btnCalc.addEventListener('click', () => {
     calc.classList.toggle('show');
-    body.classList.toggle('active-popup');
+    body.classList.toggle('active-calculator');
+    wrapper.classList.remove('active-popup');
+    body.classList.remove('active-popup');
+    addEventListener("keydown", keyboardInputHandler);
 });
 
 registerLink.addEventListener('click', () => {
@@ -21,12 +25,14 @@ loginLink.addEventListener('click', () => {
 });
 
 btnPopup.addEventListener('click', () => {
+    calc.classList.remove('show');
     wrapper.classList.add('active-popup');
     body.classList.add('active-popup');
 });
 iconClose.addEventListener('click', () => {
     wrapper.classList.remove('active-popup');
     body.classList.remove('active-popup');
+    body.classList.remove('active-calculator');
 });
 
 
@@ -63,10 +69,11 @@ function liveScreen(enteredValue) {
 }
 
 //adding event handler on the document to handle keyboard inputs
-document.addEventListener("keydown", keyboardInputHandler);
+
 
 //function to handle keyboard inputs
 function keyboardInputHandler(e) {
+  if (calc.classList.contains('show')) {
   // to fix the default behavior of browser,
   // enter and backspace were causing undesired behavior when some key was already in focus.
   e.preventDefault();
@@ -129,4 +136,5 @@ function keyboardInputHandler(e) {
     //remove the last element in the string
     res.value = resultInput.substring(0, res.value.length - 1);
   }
+}
 }
